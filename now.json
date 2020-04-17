@@ -2,6 +2,6 @@
     "name": "thools-static-website",
     "version": 2,
     "github": {
-        "enabled": false
+        "enabled": true
     }
 }
