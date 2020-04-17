@@ -40,7 +40,7 @@ body {
 @media (min-width: 768px) {
     .mt-md-6,
     .my-md-6 {
-        margin-top: 4rem !important;
+        margin-top: 5rem !important;
     }
 }
 
