@@ -36,16 +36,35 @@ body {
 .hover:hover {
     opacity: 70%;
 }
-
-@media (min-width: 768px) {
-    .mt-md-6,
-    .my-md-6 {
-        margin-top: 5rem !important;
+.hover-black:hover {
+    color: black;
+}
+.hover-btn:hover {
+    background-color: black !important;
+    color: white;
+    box-shadow: none;
+}
+@media (min-width: 1200px) {
+    .mt-xl-6 {
+        margin-top: 4rem !important;
+    }
+    .font-pc-4rem {
+        font-size: 4.5rem;
+        line-height: 4.5rem !important;
     }
 }
+@media (max-width: 1200px) {
+    .font-ce-3rem {
+        font-size: 3rem;
+        line-height: 3rem !important;
+    }
+}
+.w-60 {
+    width: 60%;
+}
 
-.w-85 {
-    width: 85%;
+#slogan {
+    font-weight: 900;
 }
 
 /* font-family: 'Lato', sans-serif; */
