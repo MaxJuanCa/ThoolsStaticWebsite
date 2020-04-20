@@ -49,8 +49,11 @@ body {
         margin-top: 4rem !important;
     }
     .font-pc-4rem {
-        font-size: 4.5rem;
-        line-height: 4.5rem !important;
+        font-size: 4rem;
+        line-height: 4rem !important;
+    }
+    .mt-xl-usrs-ag {
+        margin-top: 4.35rem;
     }
 }
 @media (max-width: 1200px) {
@@ -58,6 +61,7 @@ body {
         font-size: 3rem;
         line-height: 3rem !important;
     }
+
 }
 .w-60 {
     width: 60%;
