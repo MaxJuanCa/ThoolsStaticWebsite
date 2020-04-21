@@ -13,7 +13,6 @@ module.exports = (req, res) => {
         if (error) {
             // Do something with the error
         } else {
-            location.replace("https://www.thools.com");
-        }
+            res.redirect(200, 'contacto.html');
     });
 }
