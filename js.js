@@ -6,6 +6,12 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#slogan').addClass('animated zoomIn')
+    $('#slogan').addClass('animated zoomIn');
+
+
 
 });
+
+function onSubmit() {
+    document.getElementById("form1").submit();
+}

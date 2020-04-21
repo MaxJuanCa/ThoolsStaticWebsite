@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>webtask_forms.js Demo</title>
+    <title>Contáctenos</title>
     <style>
         body {
             font-size: 14px;
@@ -45,13 +45,16 @@
 
 <body>
     <div class="container">
-        <form id="contact" action="https://www.thools.com/api/send" method="GET">
+        <form id="contact" action="/api/send" method="GET">
             <h3>Contáctenos</h3>
+            <fieldset>
+                <input name="webtask_no_cache" type="hidden" value="1">
+            </fieldset>
             <fieldset>
                 <input name="name" placeholder="Tu nombre" type="text" tabindex="1" required autofocus>
             </fieldset>
             <fieldset>
-                <input name="from" placeholder="Tu e-mail" type="email" tabindex="2" required>
+                <input name="from" placeholder="Tu E-mail" type="email" tabindex="2" required>
             </fieldset>
             <fieldset>
                 <textarea name="message" placeholder="Tu mensaje aquí" tabindex="5" required></textarea>

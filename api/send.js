@@ -3,30 +3,18 @@ const sgMail = require('@sendgrid/mail');
 module.exports = (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-        to: 'juankamilo@gmail.com',
-        from: 'jcramirez@thools.com',
-        subject: 'Asunto de prueba',
-        text: 'Texto de prueba',
-        html: 'Hola, escribió <strong>'+ req.query.name +'</strong> con e-mail <strong>' + req.query.from + '</strong> y dijo <strong>' + req.query.message + '</strong>'
+        to: ['juankamilo@gmail.com', 'Juan Camilo Ramirez Ortiz <jcramirez@thools.com>'],
+        from: 'Juan Camilo de Thools Consulting <jcramirez@thools.com>',
+        subject: 'Nuevo contacto de ' + req.query.name,
+        text: 'Nombre: ' + req.query.name + ' |E-mail: ' + req.query.from + ' |Mensaje: ' + req.query.message,
+        html: 'Hola Thools, tenemos un nuevo contacto<br><br> <strong>Nombre: </strong>' + req.query.name + '<br><strong>E-mail:  </strong>' + req.query.from + '<br><strong>Mensaje:  </strong>' + req.query.message,
     };
-    sgMail
-        .send(msg)
-        .then(() => {
+    sgMail.send(msg, function (err, json) {
+        if (err) {
+            res(err)
+        } else {
+            res.status(200).send('Gracias por tu contacto '+ req.query.name);
             location.replace("https://www.thools.com");
-        })
-        .catch(error => {
-            // Log friendly error
-            console.error(error);
-
-            if (error.response) {
-            // Extract error msg
-            const {message, code, response} = error;
-
-            // Extract response msg
-            const {headers, body} = response;
-
-            console.error(body);
-            }
-        });
-        res.status(200).send('Gracias por contactarnos '+ req.query.name);
+        }
+    });
 }
