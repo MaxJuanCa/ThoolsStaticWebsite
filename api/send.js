@@ -1,4 +1,7 @@
-const sgMail = require('@sendgrid/mail');
+const sgMail = require('@sendgrid/mail')
+
+export default async function (req, res) {
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const msg = {
     to: 'juankamilo@gmail.com',
@@ -29,3 +32,7 @@ sgMail
         }
     }
 })();
+
+
+}
+
