@@ -9,11 +9,10 @@ module.exports = (req, res) => {
         text: 'Nombre: ' + req.query.name + ' |E-mail: ' + req.query.from + ' |Mensaje: ' + req.query.message,
         html: 'Hola Thools, tenemos un nuevo contacto<br><br> <strong>Nombre: </strong>' + req.query.name + '<br><strong>E-mail:  </strong>' + req.query.from + '<br><strong>Mensaje:  </strong>' + req.query.message,
     };
-    sgMail.send(msg, function (err, json) {
-        if (err) {
-            res(err)
+    sgMail.send(msg, (error, result) => {
+        if (error) {
+            // Do something with the error
         } else {
-            res.status(200).send('Gracias por tu contacto '+ req.query.name);
             location.replace("https://www.thools.com");
         }
     });
