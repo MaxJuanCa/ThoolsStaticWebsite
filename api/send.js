@@ -13,7 +13,7 @@ module.exports = (req, res) => {
         if (error) {
             // Do something with the error
         } else {
-            res.status(200).sendFile('recibido.html')
+            res.status(200).send('Gracias por contactarnos')
         }
     });
 }
