@@ -13,6 +13,7 @@ module.exports = (req, res) => {
         if (error) {
             // Do something with the error
         } else {
-            res.redirect(200, 'contacto.html');
+            res.redirect(301, 'http://example.com')
+        }
     });
 }
