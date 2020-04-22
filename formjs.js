@@ -12,6 +12,17 @@ async function handleOnSubmit() {
         },
         body: JSON.stringify(datos)
     });
+    db.collection("Clientes").add({
+        Email: datos.email,
+        Empresa: datos.empresa,
+        Nombre: datos.nombre
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
     var text = await res.text();
     handleResponse(res.status, text);
 };
@@ -30,6 +41,8 @@ function handleResponse(status, msg) {
         console.log(msg);
     }
 };
+
+
 
 $(document).ready(function () {
     $('#nombre').change(function () {

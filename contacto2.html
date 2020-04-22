@@ -38,6 +38,29 @@
 
 
     </div>
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyASiaw1KJ6guKPjeiL2xgHu37TctzBkujs",
+      authDomain: "wwww.thools.com",
+      databaseURL: "https://contactformthools.firebaseio.com",
+      projectId: "contactformthools",
+      storageBucket: "contactformthools.appspot.com",
+      messagingSenderId: "201059164149",
+      appId: "1:201059164149:web:2b9807128b35af87e74abc",
+      measurementId: "G-N8JP6BQLTW"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+  </script>
 </body>
 
 </html>
