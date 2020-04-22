@@ -7,7 +7,7 @@ export default async function(req, res) {
 
   const content = {
     to: 'juakamilo@gmail.com',
-    from: email,
+    from: 'jcramirez@thools.com',
     subject: `New Message From - ${email}`,
     text: empresa,
     html: `<p>${nombre} - ${empresa}</p>`
@@ -20,4 +20,5 @@ export default async function(req, res) {
     console.log('ERROR', error)
     res.status(400).send('Message not sent.')
   }
+
 }

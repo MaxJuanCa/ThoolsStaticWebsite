@@ -21,7 +21,8 @@ function handleResponse(status, msg) {
         console.log('Estatus 200');
         console.log(msg);
     } else {
-        console.log('Otros Estatus')
+        console.log('Otros Estatus');
+        console.log(msg);
     }
 };
 
