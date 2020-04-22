@@ -1,7 +1,7 @@
 const datos = {
-    "nombre" : "",
-    "empresa" : "",
-    "email" : ""
+    nombre : "",
+    empresa : "",
+    email : ""
 }
 
 async function handleOnSubmit() {
@@ -20,6 +20,11 @@ function handleResponse(status, msg) {
     if (status === 200) {
         console.log('Estatus 200');
         console.log(msg);
+        $("#nombre").attr("disabled", true);
+        $("#email").attr("disabled", true);
+        $("#empresa").attr("disabled", true);
+        $("#enviado").show();
+        $("#submit").off("click");
     } else {
         console.log('Otros Estatus');
         console.log(msg);

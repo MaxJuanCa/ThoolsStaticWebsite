@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <form">
+        <form id="formulario">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="nombre" class="form-control" placeholder="Ingresa tu nombre" id="nombre">
@@ -28,9 +28,17 @@
                 <label for="email">E-mail:</label>
                 <input type="email" class="form-control" placeholder="Ingresa tu e-mail" id="email">
             </div>
-            <a id="submit" class="btn btn-primary float-right">Enviar</a>
         </form>
+        <div id="enviado" class="text-right font-weigth-bold text-success" style="display: none;">
+            <p>Enviado</p>
+        </div>
+        <div class="text-right">
+            <a id="submit" class="btn btn-primary">Enviar</a>
+        </div>
+
+
     </div>
 </body>
 
 </html>
+
