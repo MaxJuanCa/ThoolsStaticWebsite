@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0P76FPTNW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-S0P76FPTNW');
-    </script>
-    <title>Thools - Recibido</title>
+    <title>Thools - Contáctenos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="js.js"></script>
 </head>
 <body>
-
     <div class="container">
 
         <nav class="navbar navbar-expand-xl bg-white">
@@ -50,17 +42,41 @@
                 </ul>
         </nav>
 
-        <div class="row mt-4 mt-xl-6 px-xl-4">
-            <div class="col">
-                <div class="font-ce-3rem font-pc-4rem mb-5">
-                    <p class="m-0">Gracias por contactarnos</p>
+        <div class="row mt-4 mt-xl-5 px-xl-4">
+            <div class="col-xl-5">
+                <div id="slogan" class="mb-4" style="font-size: 3rem; line-height: 3.5rem;">
+                    <p class="m-0">Cada vez estás más cerca del camino de la transformación</p>
+                </div>
+                <div class="font-lato mt-2" style="font-size: 1.2rem;color: #05516E;color: black;line-height: 1.5rem;">
+                    <p>Déjanos tus datos y pronto nos comunicaremos para agendar la cita que cambiará el desempeño de tus procesos.</p>
+                </div>
+                <div class="font-lato mt-2" style="font-size: 1.2rem;color: #05516E;color: black;line-height: 1.5rem;">
+                    <p>No lo olvides... la mejor manera de encontrar soluciones a tus retos organizacionales es tomar una pausa y compartir un café con expertos que te asesoren.</p>
                 </div>
             </div>
+            <div class="d-none d-xl-block col-xl-7 pl-5">
+                <form id="form1" action="test" method="GET">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="nombre" class="form-control" placeholder="Ingresa tu nombre" id="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa:</label>
+                        <input type="empresa" class="form-control" placeholder="Ingresa el nombre de tu empresa" id="empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" placeholder="Ingresa tu e-mail" id="email">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Acepto términos bla bla bla
+                        </label>
+                    </div>
+                    <button class="g-recaptcha btn btn-primary float-right" data-sitekey="6LcSZOwUAAAAAPmnFJSqsGGWFkfG5JAGf9a20CCy" data-callback="onSubmit">Enviar</button>
+                    </form>
+            </div>
         </div>
-
     </div>
-
-
 </body>
-
 </html>
