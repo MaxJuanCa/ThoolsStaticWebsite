@@ -70,6 +70,7 @@ const datos = {
 
 
 async function handleOnSubmit() {
+    $("#submit").attr("disabled", false)
     var res = await fetch('/api/send2', {
         method: 'POST',
         headers: {

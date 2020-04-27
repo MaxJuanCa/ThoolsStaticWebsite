@@ -16,7 +16,10 @@ export default async function(req, res) {
     '<strong>Dirección: </strong>' + req.body.direccion + '<br>'+
     '<strong>Fecha tentativa: </strong>' + req.body.fecha + '<br>'+
     '<strong>Intereado en: </strong>' + req.body.interesado + '<br>'+
-    '<strong>Mensaje:  </strong>' + req.body.mensaje
+    '<strong>Mensaje:  </strong>' + req.body.mensaje +
+    '<br>' +
+    '<br>' +
+    '<strong>Formulario de contacto en Thools.com</strong>'
 };
 
   try {
