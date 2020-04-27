@@ -18,6 +18,7 @@ window.addEventListener('load', function () {
                 datos.interesado = $('#interesado option:selected').text();
                 datos.mensaje = $('#mensaje').val();
                 console.log(datos);
+                handleOnSubmit();
             }
             form.classList.add('was-validated');
         }, false);
