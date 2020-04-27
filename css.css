@@ -2,6 +2,12 @@
 body {
     font-family: 'Exo 2', sans-serif;
 }
+.font-lato {
+    font-family: 'Lato', sans-serif !important;
+}
+.text-thools {
+    color: #05516E;
+}
 .bg-thools {
     background-color: #05516E;
 }
@@ -11,18 +17,14 @@ body {
 .border-thools {
     border-color: #05516E!important;
 }
-.font-lato {
-    font-family: 'Lato', sans-serif !important;
-}
-.text-thools {
-    color: #05516E;
-}
 .border-top-thools {
     border-top: 8px solid #05516E!important;
 }
 .custom-toggler.navbar-toggler {
     border-color: rgba(0, 0, 0, 0.5);
 }
+
+/* Bootstrap Overrides */
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -43,6 +45,7 @@ body {
     color: white;
     box-shadow: none;
 }
+
 /* PC */
 @media (min-width: 1200px) {
     .mt-xl-6 {
@@ -52,15 +55,30 @@ body {
         font-size: 4rem;
         line-height: 4rem !important;
     }
+    .font-pc-3rem {
+        font-size: 3rem;
+        line-height: 3rem !important;
+    }
     .mt-xl-usrs-ag {
         margin-top: 4.35rem;
     }
+
+    .h-pc {
+        height: 100%;
+        width: 100%;
+    }
 }
+
+
 /* Móvil */
 @media (max-width: 1200px) {
     .font-ce-3rem {
         font-size: 3rem;
         line-height: 3rem !important;
+    }
+    .h-c {
+        height: 120px;
+        width: 100%;
     }
 
 }

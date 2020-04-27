@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0P76FPTNW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-S0P76FPTNW');
-    </script>
-    <title>Thools - Tareas automáticas, usuarios felices</title>
+    <title>Thools - Contáctenos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="formjs.js"></script>
 </head>
 <body>
 
@@ -50,29 +46,98 @@
                 </ul>
         </nav>
 
-        <div class="row mt-4 mt-xl-6 px-xl-4">
-            <div class="col">
-                <div class="font-ce-3rem font-pc-4rem mb-5">
-                    <p class="m-0">Contáctanos</p>
+        <div class="row mt-4 mt-xl-5 px-xl-4">
+            <div class="col-xl-5">
+                <div id="slogan" class="mb-4" style="font-size: 3rem; line-height: 3.5rem;">
+                    <p class="m-0">Cada vez estás más cerca del camino de la transformación</p>
                 </div>
-                <div class="mt-2 font-lato" style="font-size: 1.7rem;line-height: 1.7rem;color: #05516E;font-weight: 700">
-                    <p class="mb-1">Tel.   (57-1) 358 3211</p>
+                <div class="font-lato mt-2" style="font-size: 1.2rem;color: #05516E;color: black;line-height: 1.5rem;">
+                    <p>Déjanos tus datos y pronto nos comunicaremos para agendar la cita que cambiará el desempeño de tus procesos.</p>
                 </div>
-                <div class="mt-2 font-lato" style="font-size: 1.7rem;line-height: 1.7rem;color: #05516E;font-weight: 700">
-                    <p class="mb-1">E-mail: <span><a href="mailto:ventas@thools.com">ventas@thools.com</a></span></p>
-                </div>
-                <div class="mt-2 font-lato" style="font-size: 1.7rem;line-height: 1.7rem;color: #05516E;font-weight: 700">
-                    <p class="mb-1">Dirección:   Carrera 71B #99A – 42 Bogotá, CO</p>
-                </div>
-                <div class="mt-2 font-lato" style="font-size: 1.7rem;line-height: 1.7rem;color: #05516E;font-weight: 700">
-                    <a href="https://api.whatsapp.com/send?phone=573152896626?text=Hola%20estoy%20interesado" target="_blank" class="mb-1" style="color: #05516E;">WhatsApp</a>
+                <div class="font-lato mt-2" style="font-size: 1.2rem;color: #05516E;color: black;line-height: 1.5rem;">
+                    <p>No lo olvides... la mejor manera de encontrar soluciones a tus retos organizacionales es tomar una pausa y compartir un café con expertos que te asesoren.</p>
                 </div>
             </div>
+            <div class="col-xl-7 pl-xl-5">
+                <div id="gracias" class="font-lato mt-2" style="font-size: 1.2rem;color: #05516E;color: black;line-height: 1.5rem;display: none;">
+                    <p>Gracias. Te contacteremos</p>
+                </div>
+                <form id="contacto" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nombre *" id="nombre" autofocus required>
+                        <div class="invalid-feedback">
+                            Por favor escribe el nombre
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Empresa *" id="empresa" required>
+                        <div class="invalid-feedback">
+                            Por favor escribe el nombre de la empresa
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Cargo *" id="cargo" required>
+                        <div class="invalid-feedback">
+                            Por favor escribe el cargo
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="E-mail *" id="email" required>
+                        <div class="invalid-feedback">
+                            Por favor escribe el e-mail
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Celular/Teléfono *" id="celular" required>
+                        <div class="invalid-feedback">
+                            Por favor escribe el celular/teléfono
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Dirección" id="direccion">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Fecha tentativa de encuentro *" id="fecha" required>
+                        <div class="invalid-feedback">
+                            Por favor elige una fecha
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Estoy interesado en:</label>
+                            </div>
+                            <select class="custom-select" id="interesado" required>
+                                <option selected disabled value="">Escoja</option>
+                                <option value="1">Consultoría BI</option>
+                                <option value="2">Automatización de procesos</option>
+                                <option value="3">Gestion de proyectos</option>
+                                <option value="4">Gestion documental</option>
+                                <option value="5">Otros</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor elige una opción
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="mensaje" rows="3" placeholder="Mensaje o información que quieras compartir antes de la cita con nuestro experto."></textarea>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="politica" required>
+                        <label class="form-check-label" for="politica">Autorizo el tratamiento de mis datos de acuerdo con <a href="politica-tratamiento-datos.html">Política de tratamiento de datos personales</a></label>
+                        <div class="invalid-feedback">
+                            Por favor acepta
+                        </div>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LdZxu4UAAAAACKIV2T8M5JK5k46wDYChpjjTlch" data-callback="enableBtn" data-expired-callback="disableBtn"></div>
+                    <br/>
+                    <div class="text-right">
+                        <button type="submit" class="btn font-weight-bold text-white bg-thools rounded p-2 hover-btn px-5" id="submit" disabled>Enviar</button>
+                    </div>
+                    </form>
+            </div>
         </div>
-
     </div>
-
-
 </body>
-
 </html>

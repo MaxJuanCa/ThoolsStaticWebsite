@@ -1,8 +1,72 @@
+window.addEventListener('load', function () {
+    var forms = document.getElementsByClassName('needs-validation');
+    var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            } else {
+                event.preventDefault();
+                event.stopPropagation();
+                datos.nombre = $('#nombre').val();
+                datos.empresa = $('#empresa').val();
+                datos.cargo = $('#cargo').val();
+                datos.email = $('#email').val();
+                datos.celular = $('#celular').val();
+                datos.direccion = $('#direccion').val();
+                datos.fecha = $('#fecha').val();
+                datos.interesado = $('#interesado option:selected').text();
+                datos.mensaje = $('#mensaje').val();
+                console.log(datos);
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+}, false);
+
+function enableBtn () {
+    $("#submit").attr("disabled", false)
+}
+
+function disableBtn () {
+    $("#submit").attr("disabled", true)
+}
+
+$(document).ready(function(){
+    $("#fecha").datepicker({
+        language: 'es',
+        todayHighlight: true,
+        autoclose: true,
+        clearBtn: true,
+        weekStart: 0,
+        format: {
+            toDisplay: function (date, format, language) {
+                var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+                var d = new Date(date);
+                var e = new Date(d.getTime() + d.getTimezoneOffset() * 60 * 1000)
+                return e.toLocaleDateString('es-CO', options);
+            },
+            toValue: function (date, format, language) {
+                var d = new Date(date);
+                return new Date(d);
+            }
+        }
+    });
+});
+
+
 const datos = {
     nombre : "",
     empresa : "",
-    email : ""
+    cargo: "",
+    email: "",
+    celular: "",
+    direccion: "",
+    fecha: "",
+    interesado: "",
+    mensaje: ""
 }
+
 
 async function handleOnSubmit() {
     var res = await fetch('/api/send2', {
@@ -12,57 +76,19 @@ async function handleOnSubmit() {
         },
         body: JSON.stringify(datos)
     });
-    db.collection("Clientes").add({
-        Email: datos.email,
-        Empresa: datos.empresa,
-        Nombre: datos.nombre
-    })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
     var text = await res.text();
     handleResponse(res.status, text);
 };
+
 
 function handleResponse(status, msg) {
     if (status === 200) {
         console.log('Estatus 200');
         console.log(msg);
-        $("#nombre").attr("disabled", true);
-        $("#email").attr("disabled", true);
-        $("#empresa").attr("disabled", true);
-        $("#enviado").show();
-        $("#submit").off("click");
+        $('#contacto').hide();
+        $('#gracias').show();
     } else {
         console.log('Otros Estatus');
         console.log(msg);
     }
 };
-
-
-
-$(document).ready(function () {
-    $('#nombre').change(function () {
-        datos.nombre = $(this).val();
-        console.log(datos);
-    });
-
-    $('#empresa').change(function () {
-        datos.empresa = $(this).val();
-        console.log(datos);
-    });
-
-    $('#email').change(function () {
-        datos.email = $(this).val();
-        console.log(datos);
-    });
-
-    $('#submit').click(function (e) {
-        event.preventDefault();
-        handleOnSubmit()
-    });
-
-});

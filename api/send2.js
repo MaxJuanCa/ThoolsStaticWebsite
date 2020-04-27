@@ -8,7 +8,15 @@ export default async function(req, res) {
     from: 'Juan Camilo de Thools Consulting <jcramirez@thools.com>',
     subject: 'Nuevo contacto de ' + req.body.email,
     text: 'Nombre: ' + req.body.nombre + ' |E-mail: ' + req.body.email + ' |Mensaje: ' + req.body.empresa,
-    html: 'Hola Thools, tenemos un nuevo contacto<br><br> <strong>Nombre: </strong>' + req.body.nombre + '<br><strong>E-mail:  </strong>' + req.body.email + '<br><strong>Mensaje:  </strong>' + req.body.empresa,
+    html: 'Hola Thools, tenemos un nuevo contacto de:<br><br>' +
+    '<strong>Nombre: </strong>' + req.body.nombre + '<br>'+
+    '<strong>Empresa: </strong>' + req.body.empresa + '<br>'+
+    '<strong>Cargo: </strong>' + req.body.cargo + '<br>'+
+    '<strong>E-mail: </strong>' + req.body.email + '<br>'+
+    '<strong>Dirección: </strong>' + req.body.direccion + '<br>'+
+    '<strong>Fecha tentativa: </strong>' + req.body.fecha + '<br>'+
+    '<strong>Intereado en: </strong>' + req.body.interesado + '<br>'+
+    '<strong>Mensaje:  </strong>' + req.body.mensaje
 };
 
   try {
