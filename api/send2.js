@@ -4,11 +4,11 @@ export default async function(req, res) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
   const content = {
-    to: ['juankamilo@gmail.com', 'Juan Camilo Ramirez Ortiz <jcramirez@thools.com>'],
-    from: 'Juan Camilo de Thools Consulting <jcramirez@thools.com>',
+    to: ['juankamilo@gmail.com', 'Juan Camilo Ramirez Ortiz <jcramirez@thools.com>', 'Jadir Gabriel Acuña Ortiz <jgacuna@thools.com>', 'Julian Mauricio Urueña Ramirez <juruena@thools.com>', 'Jhon Jairo Ortiz Beltran < jortiz@thools.com>'],
+    from: 'Contacto Thools Consulting <jcramirez@thools.com>',
     subject: 'Nuevo contacto de ' + req.body.email,
     text: 'Nombre: ' + req.body.nombre + ' |E-mail: ' + req.body.email + ' |Mensaje: ' + req.body.empresa,
-    html: 'Hola Thools, tenemos un nuevo contacto de:<br><br>' +
+    html: 'Nuevo contacto de:<br><br>' +
     '<strong>Nombre: </strong>' + req.body.nombre + '<br>'+
     '<strong>Empresa: </strong>' + req.body.empresa + '<br>'+
     '<strong>Cargo: </strong>' + req.body.cargo + '<br>'+
