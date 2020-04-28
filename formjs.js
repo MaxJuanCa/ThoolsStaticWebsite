@@ -22,10 +22,22 @@ $(document).ready(function(){
     $('#slogan').addClass('animated zoomIn');
 });
 
+function removeCaptchaValidation () {
+    $('.g-recaptcha').removeClass('is-invalid');
+    $('.g-recaptcha>div').removeClass('border rounded border-danger');
+}
+
 window.addEventListener('load', function () {
     var forms = document.getElementsByClassName('needs-validation');
     var validation = Array.prototype.filter.call(forms, function (form) {
         form.addEventListener('submit', function (event) {
+            var response = grecaptcha.getResponse();
+            if(response.length == 0){
+                $('.g-recaptcha>div').addClass('border rounded border-danger');
+                $('.g-recaptcha').addClass('is-invalid');
+                event.preventDefault();
+                event.stopPropagation();
+            }
             if (form.checkValidity() === false) {
                 event.preventDefault();
                 event.stopPropagation();

@@ -15,7 +15,7 @@ export default async function(req, res) {
     '<strong>E-mail: </strong>' + req.body.email + '<br>'+
     '<strong>Dirección: </strong>' + req.body.direccion + '<br>'+
     '<strong>Fecha tentativa: </strong>' + req.body.fecha + '<br>'+
-    '<strong>Intereado en: </strong>' + req.body.interesado + '<br>'+
+    '<strong>Interesado en: </strong>' + req.body.interesado + '<br>'+
     '<strong>Mensaje:  </strong>' + req.body.mensaje +
     '<br>' +
     '<br>' +
@@ -24,7 +24,7 @@ export default async function(req, res) {
 
   try {
     await sgMail.send(content)
-    res.status(200).send(req.body.email + ' ' + req.body.nombre + ' ' + req.body.empresa + ' Message sent successfully. 9.57')
+    res.status(200).send('Message sent successfully.')
   } catch (error) {
     console.log('ERROR', error)
     res.status(400).send('Message not sent.')
