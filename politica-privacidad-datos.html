@@ -21,128 +21,137 @@
     <link rel="stylesheet" href="css.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="js.js"></script>
 </head>
 
-<body>
+<body class="d-flex flex-column">
+    <div id="page-content">
+        <div class="container">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xl bg-white">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img\logoALT.png" alt="Logo Thools">
+                </a>
+                <button class="navbar-toggler navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <div class="container">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-xl bg-white">
-            <a class="navbar-brand" href="index.html">
-                <img src="img\logoALT.png" alt="Logo Thools">
-            </a>
-            <button class="navbar-toggler navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav ml-auto ">
+                        <li class="nav-item ml-3">
+                            <a class="nav-link font-weight-bold text-dark" href="quienes-somos.html">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="nav-link font-weight-bold text-dark" href="index.html#loQueHacemos">Lo que hacemos</a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a class="nav-link font-weight-bold text-dark" href="index.html#clientes">Nuestros clientes</a>
+                        </li>
+                        <li class="nav-item ml-3" style="display: none;">
+                            <a class="nav-link font-weight-bold text-dark" href="#queremos">Blog</a>
+                        </li>
+                        <li class="nav-item ml-5 bg-thools rounded hover-btn d-none d-xl-block">
+                            <a class="nav-link font-weight-bold text-white" href="contacto.html">Obtén una asesoria</a>
+                        </li>
+                    </ul>
+            </nav>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav navbar-nav ml-auto ">
-                    <li class="nav-item ml-3">
-                        <a class="nav-link font-weight-bold text-dark" href="quienes-somos.html">Quiénes somos</a>
-                    </li>
-                    <li class="nav-item ml-3">
-                        <a class="nav-link font-weight-bold text-dark" href="index.html#loQueHacemos">Lo que hacemos</a>
-                    </li>
-                    <li class="nav-item ml-3">
-                        <a class="nav-link font-weight-bold text-dark" href="index.html#clientes">Nuestros clientes</a>
-                    </li>
-                    <li class="nav-item ml-3" style="display: none;">
-                        <a class="nav-link font-weight-bold text-dark" href="#queremos">Blog</a>
-                    </li>
-                    <li class="nav-item ml-5 bg-thools rounded hover-btn d-none d-xl-block">
-                        <a class="nav-link font-weight-bold text-white" href="contacto.html">Obtén una asesoria</a>
-                    </li>
-                </ul>
-        </nav>
-
-        <div class="row mt-5 mb-3">
-            <div class="col">
-                <h5>POLÍTICA DE PRIVACIDAD Y TRATAMIENTO DE DATOS PERSONALES</h5>
-                <hr>
-                <h6 class="font-weight-bold">INTRODUCCIÓN</h6>
-                <p>
-                    Thools en desarrollo de sus principios: responsabilidad, respeto, transparencia y equidad,
-                    determinan
-                    la información de sus empleados, clientes y proveedores como uno de los activos más importantes; por
-                    lo tanto, declara la importancia de realizar un adecuado tratamiento de su información, acogiéndose
-                    al marco normativo que lo regula en el pais.
-                </p>
-                <h6 class="font-weight-bold">ALCANCE</h6>
-                <p>
-                    La presente política de privacidad es un documento vinculante para Thools Consulting SAS en calidad
-                    de responsable de los datos a tratar, en adelante LA EMPRESA.
-                </p>
-                <p>
-                    Datos del responsable: Thools Consulting SAS con domicilio principal en la ciudad de Bogotá, en la
-                    Carrera 71B #99A – 42, comunicación a través de la línea 358 3211 desde Bogotá, o al correo
-                    electrónico ventas@thools.com.
-                </p>
-                <p>
-                    Información que recolectamos y almacenamos de nuestros clientes: dependiendo de la relación que el
-                    titular tenga con LA EMPRESA, la información que se recopila o almacena puede incluir lo siguiente:
-                </p>
-                <p>
-                    Datos privados: son aquellos que por su naturaleza íntima o reservada sólo son relevantes para el
-                    cliente o persona que contacta con LA EMPRESA. Por ejemplo: Nombre, nombre de la empresa en la que
-                    labora, cargo, correo electrónico,
-                    celular/teléfono, dirección.
-                </p>
-                <h6 class="font-weight-bold">FINALIDAD</h6>
-                <p>
-                    <span class="font-weight-bold">Tratamiento al cual serán sometidos los datos personales:</span> LA
-                    EMPRESA usará la información personal de sus clientes o persona que contacta con la empresa para los
-                    fines autorizados e informados al cliente y aquellos señalados en la
-                    presente política, siempre que el tratamiento obedezca a un fin legítimo y sea proporcional de
-                    acuerdo a la vinculación del cliente, particularmente para lo que resulte necesario para la
-                    prestación de los servicios encargados, como ejecutar y cumplir el contrato. La autorización de
-                    tratamiento de datos sensibles es facultativa.
-                </p>
-                <p>
-                    <span class="font-weight-bold">Finalidades con las cuales serán tratados los datos:</span> con el
-                    objetivo de obtener un mejor servicio
-                    para empleados, clientes o proveedores, autoriza a LA EMPRESA., en calidad de responsable, a tratar
-                    sus datos, pudiendo o no utilizar computación en la nube, para las siguientes actividades:
-                </p>
-                <p>
-                    Finalidades inherentes al objeto contractual o autorizadas por normatividad.
-                </p>
-                <p>
-                    Para el caso de el formulario de contacto del sitio web www.thools.com, ser contactado para la
-                    entrega de ofertas comerciales e información publicitaria.
-                </p>
-                <p>
-                    <span class="font-weight-bold">Derechos de los titulares:</span> de acuerdo con lo establecido en la
-                    Ley 1581 de 2012, los titulares tienen derecho a autorizar el tratamiento de sus datos personales,
-                    revocar la autorización, conocer los datos que son tratados, actualizarlos, rectificarlos cuando se
-                    considere que existe deficiencia en su calidad, y finalmente solicitar la supresión de datos siempre
-                    y cuando no exista una obligación legal o contractual de continuar con el tratamiento (artículo
-                    2.2.2.25.2.8 Decreto 1074 de 2015), por ejemplo en el caso de las finalidades que son inherentes al
-                    objeto contratado y sin las cuales no es posible su ejecución.
-                </p>
-                <p>
-                    <span class="font-weight-bold">Ejercicio de los derechos sobre los datos personales:</span> los
-                    titulares de la información podrán ejercer sus derechos en cualquier tiempo, para lo cual podrán
-                    comunicarse con la linea 358 3211 en Bogotá, enviar un correo electrónico a ventas@thools.com.
-                </p>
+            <div class="row mt-5 mb-3">
+                <div class="col">
+                    <h5>POLÍTICA DE PRIVACIDAD Y TRATAMIENTO DE DATOS PERSONALES</h5>
+                    <hr>
+                    <h6 class="font-weight-bold">INTRODUCCIÓN</h6>
+                    <p>
+                        THOOLS en desarrollo de sus principios: responsabilidad, respeto, transparencia y equidad,
+                        determinan
+                        la información de sus empleados, clientes y proveedores como uno de los activos más importantes; por
+                        lo tanto, declara la importancia de realizar un adecuado tratamiento de su información, acogiéndose
+                        al marco normativo que lo regula en el país.
+                    </p>
+                    <h6 class="font-weight-bold">ALCANCE</h6>
+                    <p>
+                        La presente política de privacidad es un documento vinculante para THOOLS Consulting S.A.S. en calidad
+                        de responsable de los datos a tratar, en adelante LA EMPRESA.
+                    </p>
+                    <p>
+                        Datos del responsable: THOOLS Consulting S.A.S. con domicilio principal en la ciudad de Bogotá, en la
+                        Carrera 71B #99A – 42, comunicación a través de la línea 358 3211 desde Bogotá, o al correo
+                        electrónico ventas@thools.com.
+                    </p>
+                    <p>
+                        Información que recolectamos y almacenamos de nuestros clientes: dependiendo de la relación que el
+                        titular tenga con LA EMPRESA, la información que se recopila o almacena puede incluir lo siguiente:
+                    </p>
+                    <p>
+                        Datos privados: son aquellos que por su naturaleza íntima o reservada sólo son relevantes para el
+                        cliente o persona que contacta con LA EMPRESA. Por ejemplo: Nombre, nombre de la empresa en la que
+                        labora, cargo, correo electrónico,
+                        celular/teléfono, dirección.
+                    </p>
+                    <h6 class="font-weight-bold">FINALIDAD</h6>
+                    <p>
+                        <span class="font-weight-bold">Tratamiento al cual serán sometidos los datos personales:</span> LA
+                        EMPRESA usará la información personal de sus clientes o persona que contacta con la empresa para los
+                        fines autorizados e informados al cliente y aquellos señalados en la
+                        presente política, siempre que el tratamiento obedezca a un fin legítimo y sea proporcional de
+                        acuerdo a la vinculación del cliente, particularmente para lo que resulte necesario para la
+                        prestación de los servicios encargados, como ejecutar y cumplir el contrato. La autorización de
+                        tratamiento de datos sensibles es facultativa.
+                    </p>
+                    <p>
+                        <span class="font-weight-bold">Finalidades con las cuales serán tratados los datos:</span> con el
+                        objetivo de obtener un mejor servicio
+                        para empleados, clientes o proveedores, autoriza a LA EMPRESA., en calidad de responsable, a tratar
+                        sus datos, pudiendo o no utilizar computación en la nube, para las siguientes actividades:
+                    </p>
+                    <p>
+                        Finalidades inherentes al objeto contractual o autorizadas por normatividad.
+                    </p>
+                    <p>
+                        Para el caso del formulario de contacto del sitio web www.thools.com, ser contactado para la
+                        entrega de ofertas comerciales e información publicitaria.
+                    </p>
+                    <p>
+                        <span class="font-weight-bold">Derechos de los titulares:</span> de acuerdo con lo establecido en la
+                        Ley 1581 de 2012, los titulares tienen derecho a autorizar el tratamiento de sus datos personales,
+                        revocar la autorización, conocer los datos que son tratados, actualizarlos, rectificarlos cuando se
+                        considere que existe deficiencia en su calidad, y finalmente solicitar la supresión de datos siempre
+                        y cuando no exista una obligación legal o contractual de continuar con el tratamiento (artículo
+                        2.2.2.25.2.8 Decreto 1074 de 2015), por ejemplo en el caso de las finalidades que son inherentes al
+                        objeto contratado y sin las cuales no es posible su ejecución.
+                    </p>
+                    <p>
+                        <span class="font-weight-bold">Ejercicio de los derechos sobre los datos personales:</span> los
+                        titulares de la información podrán ejercer sus derechos en cualquier tiempo, para lo cual podrán
+                        comunicarse con la línea 358 3211 en Bogotá, enviar un correo electrónico a ventas@thools.com.
+                    </p>
 
 
+                </div>
             </div>
         </div>
     </div>
 
+
     <!-- Footer -->
-    <div class="container-fluid">
-        <footer>
-            <div class="row bg-thools py-5">
-                <div class="col text-center">
-                    <p class="text-white font-weight-bold">E-mail: ventas@thools.com | Carrera 71B #99A – 42 Bogotá,
-                        CO | Tel. (57-1) 358 3211</p>
+    <footer id="sticky-footer" class="py-4 bg-thools text-white font-weight-bold">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col">
+                    <p class="mb-0">E-mail: ventas@thools.com<span class="mx-2">|</span>Carrera 71B # 99A – 42 Bogotá, Colombia<span class="mx-2">|</span>Tel. (57-1) 358 3211</p>
+                    <div class="btn-group" role="group" style="font-size: 1.5rem; ">
+                        <a class="text-white mr-2" href="#"><i class="fab fa-linkedin"></i></a>
+                        <a class="text-white mr-2" href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a class="text-white mr-2" href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a class="text-white mr-2" href="#"><i class="fab fa-instagram-square"></i></a>
+                    </div>
                 </div>
+
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
 </body>
 

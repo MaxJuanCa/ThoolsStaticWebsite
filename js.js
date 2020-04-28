@@ -5,13 +5,5 @@ $(document).ready(function () {
         }, 1000);
         return false;
     });
-
     $('#slogan').addClass('animated zoomIn');
-
-
-
 });
-
-function onSubmit() {
-    document.getElementById("form1").submit();
-}

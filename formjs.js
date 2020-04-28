@@ -1,38 +1,3 @@
-window.addEventListener('load', function () {
-    var forms = document.getElementsByClassName('needs-validation');
-    var validation = Array.prototype.filter.call(forms, function (form) {
-        form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-            } else {
-                event.preventDefault();
-                event.stopPropagation();
-                datos.nombre = $('#nombre').val();
-                datos.empresa = $('#empresa').val();
-                datos.cargo = $('#cargo').val();
-                datos.email = $('#email').val();
-                datos.celular = $('#celular').val();
-                datos.direccion = $('#direccion').val();
-                datos.fecha = $('#fecha').val();
-                datos.interesado = $('#interesado option:selected').text();
-                datos.mensaje = $('#mensaje').val();
-                console.log(datos);
-                handleOnSubmit();
-            }
-            form.classList.add('was-validated');
-        }, false);
-    });
-}, false);
-
-function enableBtn () {
-    $("#submit").attr("disabled", false)
-}
-
-function disableBtn () {
-    $("#submit").attr("disabled", true)
-}
-
 $(document).ready(function(){
     $("#fecha").datepicker({
         language: 'es',
@@ -53,8 +18,55 @@ $(document).ready(function(){
             }
         }
     });
+    autosize($('textarea'));
+    $('#slogan').addClass('animated zoomIn');
 });
 
+window.addEventListener('load', function () {
+    var forms = document.getElementsByClassName('needs-validation');
+    var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            } else {
+                event.preventDefault();
+                event.stopPropagation();
+                datos.nombre = $('#nombre').val();
+                datos.empresa = $('#empresa').val();
+                datos.cargo = $('#cargo').val();
+                datos.email = $('#email').val();
+                datos.celular = $('#celular').val();
+                datos.direccion = $('#direccion').val();
+                datos.fecha = $('#fecha').val();
+                datos.interesado = $('#interesado option:selected').text();
+                datos.mensaje = $('#mensaje').val();
+
+                datosBI.Nombre = $('#nombre').val();
+                datosBI.Empresa = $('#empresa').val();
+                datosBI.Cargo = $('#cargo').val();
+                datosBI.Email = $('#email').val();
+                datosBI.Direccion = $('#direccion').val();
+                datosBI.Mensaje = $('#mensaje').val();
+                datosBI.Fechayhoracreacion = (new Date(Date.now() - 18000000)).toISOString();
+                datosBI.FechaTentativa = (new Date($('#fecha').datepicker('getDate').getTime() - 18000000)).toISOString();
+                datosBI.Celular = $('#celular').val();
+                datosBI.interesado = $('#interesado option:selected').text();
+                handleBIsend();
+                handleOnSubmit();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+}, false);
+
+function enableBtn () {
+    $("#submit").attr("disabled", false)
+}
+
+function disableBtn () {
+    $("#submit").attr("disabled", true)
+}
 
 const datos = {
     nombre : "",
@@ -67,6 +79,31 @@ const datos = {
     interesado: "",
     mensaje: ""
 }
+
+const datosBI = [{
+    "Nombre" : "",
+    "Empresa" : "",
+    "Cargo" : "",
+    "Email" : "",
+    "Direccion" : "",
+    "Mensaje": "",
+    "Fechayhoracreacion" : "",
+    "FechaTentativa" : "",
+    "Celular": "",
+    "Interesado": ""
+}]
+
+async function handleBIsend() {
+    var res = await fetch('https://api.powerbi.com/beta/74489909-68bd-46b6-9d1b-3f73ef0f56b6/datasets/dd8515af-8c82-41e5-b31e-cb08f19b612a/rows?noSignUpCheck=1&key=%2Fdh%2B0Zst%2FoJuMIEGRS96%2BXUGncA3GPIIvWtYRyy3DlP7JsF9ONOhmlEH1PDwWf%2Bs8BlmAHGpU%2FVXJN7AfUS86g%3D%3D', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datosBI)
+    });
+    var text = await res.text();
+    handleResponseBI(res.status, text);
+};
 
 
 async function handleOnSubmit() {
@@ -85,12 +122,21 @@ async function handleOnSubmit() {
 
 function handleResponse(status, msg) {
     if (status === 200) {
-        console.log('Estatus 200');
+        console.log('Datos enviados a recipientes de e-mail exitosamente (Código 200)');
         console.log(msg);
         $('#contacto').hide();
         $('#gracias').show();
     } else {
-        console.log('Otros Estatus');
+        console.log('Fallo al intentar enviar datos a recipientes de e-mail (Código '+ status +')');
+        console.log(msg);
+    }
+};
+
+function handleResponseBI(status, msg) {
+    if (status === 200) {
+        console.log('Datos enviados a PowerBI exitosamente (Código 200)');
+    } else {
+        console.log('Fallo al enviar los datos a PowerBI (Código '+ status +')');
         console.log(msg);
     }
 };

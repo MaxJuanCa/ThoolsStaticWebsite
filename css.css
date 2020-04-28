@@ -1,7 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2:400,700,900|Lato:400,700,900&display=swap');
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Exo 2', sans-serif;
+    height: 100%;
+}
+
+#page-content {
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: none;
 }
 
 .font-lato {
