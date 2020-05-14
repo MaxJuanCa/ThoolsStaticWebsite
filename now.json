@@ -7,5 +7,9 @@
             "SENDGRID_API_KEY": "@sendgrid_api_key"
         }
     },
-    "cleanUrls": true
+    "cleanUrls": true,
+    "redirects": [
+        { "source": "/covid", "destination": "https://sura.az1.qualtrics.com/jfe/form/SV_87Fdd15spkfHEgd?sector=VElD&idEmpresa=OTAwODA4MzYz&nitEmpresa=900808363&mail=gerencia@thools.com"},
+        { "source": "/covid2", "destination": "https://sura.az1.qualtrics.com/jfe/form/SV_aXgXru763zghtYh?sector=VElD&idEmpresa=OTAwODA4MzYz&nitEmpresa=900808363&mail=gerencia@thools.com"}
+    ]
 }

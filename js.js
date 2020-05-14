@@ -1,3 +1,7 @@
+$(window).on("load",function(){
+    $(".se-pre-con").fadeOut("slow");
+});
+
 $(document).ready(function () {
     $('a').click(function () {
         $('html, body').animate({
@@ -6,4 +10,5 @@ $(document).ready(function () {
         return false;
     });
     $('#slogan').addClass('animated zoomIn');
+    AOS.init();
 });
