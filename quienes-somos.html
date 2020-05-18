@@ -12,30 +12,39 @@
     <title>Quiénes somos | THOOLS CONSULTING</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="css.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js.js"></script>
 </head>
 <body class="d-flex flex-column">
+    <div class="se-pre-con"></div>
     <div id="page-content">
         <div class="container">
+
             <!-- Navbar -->
             <nav class="navbar navbar-expand-xl bg-white">
                 <a class="navbar-brand" href="index.html">
@@ -47,7 +56,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav navbar-nav ml-auto ">
                         <li class="nav-item ml-3">
-                            <a class="nav-link font-weight-bold text-dark" href="#">Quiénes somos</a>
+                            <a class="nav-link font-weight-bold text-dark" href="quienes-somos.html">Quiénes somos</a>
                         </li>
                         <li class="nav-item ml-3">
                             <a class="nav-link font-weight-bold text-dark" href="index.html#loQueHacemos">Lo que hacemos</a>
@@ -56,73 +65,68 @@
                             <a class="nav-link font-weight-bold text-dark" href="index.html#clientes">Nuestros clientes</a>
                         </li>
                         <li class="nav-item ml-3" style="display: none;">
-                            <a class="nav-link font-weight-bold text-dark" href="index.html#queremos">Blog</a>
+                            <a class="nav-link font-weight-bold text-dark" href="#">Blog</a>
                         </li>
                         <li class="nav-item ml-5 bg-thools rounded hover-btn d-none d-xl-block">
-                            <a class="nav-link font-weight-bold text-white" href="contacto.html">Obtén una asesoria</a>
+                            <a class="nav-link font-weight-bold text-white px-3" href="contacto.html">Obtén una asesoria</a>
                         </li>
                     </ul>
             </nav>
 
             <!-- Jumbotron -->
-            <div class="row mt-4 mt-xl-5 px-xl-4">
-                <!-- Imagen móvil -->
-                <div class="col d-block d-xl-none text-right">
-                    <img class="w-50 ml-auto" src="img\quienes-somos.png" alt="imagen principal">
+            <div id="jumbotron" class="row mt-4 mt-xl-4 px-xl-4">
+                <!-- Imagen Móvil -->
+                <div class="d-block d-xl-none text-right">
+                    <img class="w-75" src="img/quienes-somos.png" alt="Imagen principal de mesa de servicio - version móvil">
                 </div>
                 <!-- Imagen PC -->
-                <div class="d-none d-xl-block col-xl-5 text-center align-self-center">
-                    <img class="w-100" src="img\quienes-somos.png" alt="imagen principal">
+                <div class="d-none d-xl-block col-xl-6 text-center align-self-center">
+                    <img class="h-100" src="img/quienes-somos.png" alt="Imagen principal de mesa de servicio">
                 </div>
                 <!-- Texto -->
-                <div class="col-xl-7 text-right">
-                    <div class="row">
-                        <div class="col">
-                            <div id="slogan" class="font-ce-3rem font-pc-3rem">
-                                <p class="m-0">Consultores expertos en soluciones de negocio basadas en tecnología Microsoft</p>
-                            </div>
-                        </div>
+                <div class="col-xl-6 align-self-center">
+                    <div class="text-right">
+                        <p id="slogan" class="m-0 font-ce-3rem font-pc-3rem">Consultores expertos en soluciones de negocio basadas en tecnología Microsoft</p>
                     </div>
                     <div class="row justify-content-end">
-                        <div class="col-xl-9 align-self-end">
-                            <div class="font-lato mt-2" style="font-size: 1.2rem;color: #05516E;color: black;line-height: 1.5rem;">
-                                <p>En THOOLS diseñamos soluciones seguras, ágiles y de administración simple, orientadas al aumento
-                                    de la productividad y rentabilidad de nuestros clientes. Trabajamos de la mano de los mejores en
-                                    optimización de procesos, desarrollo tecnológico e innovación.</p>
-                            </div>
+                        <div class="col-xl-9 font-lato mt-2 text-right" style="font-size: 1.2rem;line-height: 1.5rem;">
+                            <p>En THOOLS diseñamos soluciones seguras, ágiles y de administración simple, orientadas al aumento
+                                de la productividad y rentabilidad de nuestros clientes. Trabajamos de la mano de los mejores en
+                                optimización de procesos, desarrollo tecnológico e innovación.
+                            </p>
                         </div>
                     </div>
-
-                    <div>
+                    <div class="text-right">
                         <a class="btn bg-thools font-weight-bold text-white rounded py-2 px-3 hover-btn" href="index.html#loQueHacemos">Conoce lo que hacemos</a>
                     </div>
                 </div>
             </div>
 
-            <section id="loQueNosMueve">
-                <div class="row mb-3" style="margin-top: 6rem;">
-                    <div class="col" style="font-size: 2rem;font-weight: 900;">
-                        <p>Lo que nos mueve</p>
+            <!-- Lo que nos mueve -->
+            <section id="loQueNosMueve" class="mt-5 mb-5 mt-xl-5rem">
+                <div class="row mb-3">
+                    <div class="col">
+                        <h2 class="font-weight-bold900">Lo que nos mueve</h2>
                     </div>
                 </div>
-                <div class="row" style="margin-bottom: 3rem;">
-                    <div class="col-lg-6 col-xl-3 mb-5">
-                        <img class="mb-2 d-block d-xl-none" width="20%"  src="img\compromiso.png" alt="Compromiso">
-                        <img class="mb-4 d-none d-xl-block" width="40%"  src="img\compromiso.png" alt="Compromiso">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-3 mb-3 mb-xl-0" data-aos="fade-up">
+                        <img class="mb-2 d-block d-xl-none" width="20%"  src="img/compromiso.png" alt="Compromiso">
+                        <img class="mb-4 d-none d-xl-block" width="40%"  src="img/compromiso.png" alt="Compromiso">
                         <p class="font-lato font-weight-bold" style="font-size: 1.25rem;">Compromiso</p>
                         <p class="mb-1 mb-xl-2 font-lato" style="font-size: 1.1rem;">Nos apasiona lo que hacemos, por eso nos esforzamos al máximo y trabajamos duro para que nuestros clientes alcancen sus objetivos.</p>
                     </div>
-                    <div class="col-lg-6 col-xl mb-5"></div>
-                    <div class="col-lg-6 col-xl-3 mb-5">
-                        <img class="mb-2 d-block d-xl-none" width="20%"  src="img\innovacion.png" alt="Innovación">
-                        <img class="mb-4 d-none d-xl-block" width="40%"  src="img\innovacion.png" alt="Innovación">
+                    <div class="col-lg-6 col-xl"></div>
+                    <div class="col-lg-6 col-xl-3 mb-3 mb-xl-0" data-aos="fade-up">
+                        <img class="mb-2 d-block d-xl-none" width="20%"  src="img/innovacion.png" alt="Innovacion">
+                        <img class="mb-4 d-none d-xl-block" width="40%"  src="img/innovacion.png" alt="Innovacion">
                         <p class="font-lato font-weight-bold" style="font-size: 1.25rem;">Innovación</p>
                         <p class="mb-1 mb-xl-2 font-lato" style="font-size: 1.1rem;">Amamos las ideas creativas, viables y originales que nos permitan satisfacer las necesidades únicas de cada organización.</p>
                     </div>
-                    <div class="col-lg-6 col-xl mb-5"></div>
-                    <div class="col-lg-6 col-xl-3 mb-5">
-                        <img class="mb-2 d-block d-xl-none" width="20%"  src="img\honestidad.png" alt="Honestidad">
-                        <img class="mb-4 d-none d-xl-block" width="40%"  src="img\honestidad.png" alt="Honestidad">
+                    <div class="col-lg-6 col-xl"></div>
+                    <div class="col-lg-6 col-xl-3 mb-3 mb-xl-0" data-aos="fade-up">
+                        <img class="mb-2 d-block d-xl-none" width="20%"  src="img/honestidad.png" alt="Honestidad">
+                        <img class="mb-4 d-none d-xl-block" width="40%"  src="img/honestidad.png" alt="Honestidad">
                         <p class="font-lato font-weight-bold" style="font-size: 1.25rem;">Honestidad</p>
                         <p class="mb-1 mb-xl-2 font-lato" style="font-size: 1.1rem;">Nuestros clientes son nuestros mejores aliados, por esto construimos relaciones sólidas basadas en confianza mutua y transparencia.</p>
                     </div>
@@ -169,24 +173,22 @@
         </div>
     </div>
 
-
+    <!-- Footer -->
     <footer id="sticky-footer" class="py-4 bg-thools text-white font-weight-bold">
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col">
                     <p class="mb-0">E-mail: ventas@thools.com<span class="mx-2">|</span>Carrera 71B # 99A – 42 Bogotá, Colombia<span class="mx-2">|</span>Tel. (57-1) 358 3211</p>
-                    <div class="btn-group" role="group" style="font-size: 1.5rem; ">
-                        <a class="text-white mr-2" href="#"><i class="fab fa-linkedin"></i></a>
-                        <a class="text-white mr-2" href="#"><i class="fab fa-twitter-square"></i></a>
-                        <a class="text-white mr-2" href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a class="text-white mr-2" href="#"><i class="fab fa-instagram-square"></i></a>
+                    <div class="btn-group" role="group" style="font-size: 1.75rem; ">
+                        <a class="text-white mr-2" href="https://twitter.com/THOOLSOFICIAL" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a class="text-white mr-2" href="#" onclick="return false;"><i class="fab fa-linkedin"></i></a>
+                        <a class="text-white mr-2" href="#" onclick="return false;"><i class="fab fa-facebook-square"></i></a>
+                        <a class="text-white mr-2" href="#" onclick="return false;"><i class="fab fa-instagram-square"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>
 
 </body>
-
 </html>

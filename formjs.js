@@ -64,6 +64,8 @@ window.addEventListener('load', function () {
                 datosBI.FechaTentativa = (new Date($('#fecha').datepicker('getDate').getTime() - 18000000)).toISOString();
                 datosBI.Celular = $('#celular').val();
                 datosBI.interesado = $('#interesado option:selected').text();
+                $('.g-recaptcha>div').removeClass('border rounded border-danger');
+                $('#enviando').addClass('d-inline')
                 handleBIsend();
                 handleOnSubmit();
             }
@@ -71,14 +73,6 @@ window.addEventListener('load', function () {
         }, false);
     });
 }, false);
-
-function enableBtn () {
-    $("#submit").attr("disabled", false)
-}
-
-function disableBtn () {
-    $("#submit").attr("disabled", true)
-}
 
 const datos = {
     nombre : "",

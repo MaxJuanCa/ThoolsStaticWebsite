@@ -35,13 +35,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="js.js"></script>
     <script src="formjs.js"></script>
 </head>
 <body class="d-flex flex-column">
     <div id="page-content">
         <div class="container">
 
+            <!-- Navbar -->
             <nav class="navbar navbar-expand-xl bg-white">
                 <a class="navbar-brand" href="index.html">
                     <img src="img\logoALT.png" alt="Logo Thools">
@@ -49,6 +52,7 @@
                 <button class="navbar-toggler navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav navbar-nav ml-auto ">
                         <li class="nav-item ml-3">
@@ -61,15 +65,19 @@
                             <a class="nav-link font-weight-bold text-dark" href="index.html#clientes">Nuestros clientes</a>
                         </li>
                         <li class="nav-item ml-3" style="display: none;">
-                            <a class="nav-link font-weight-bold text-dark" href="index.html#queremos">Blog</a>
+                            <a class="nav-link font-weight-bold text-dark" href="#">Blog</a>
                         </li>
                         <li class="nav-item ml-5 bg-thools rounded hover-btn d-none d-xl-block">
-                            <a class="nav-link font-weight-bold text-white" href="index.html#queremos">Obtén una asesoria</a>
+                            <a class="nav-link font-weight-bold text-white px-3" href="contacto.html">Obtén una asesoria</a>
                         </li>
                     </ul>
             </nav>
 
+            <!-- Contenido -->
+
             <div class="row mt-4 mt-xl-5 px-xl-4">
+
+                <!-- Texto -->
                 <div class="col-xl-5">
                     <div id="slogan" class="mb-4" style="font-size: 3rem; line-height: 3.5rem;">
                         <p class="m-0">Cada vez estás más cerca del camino de la transformación digital</p>
@@ -81,6 +89,8 @@
                         <p>No lo olvides... la mejor manera de encontrar soluciones a tus retos organizacionales es tomar una pausa y compartir un café con expertos de THOOLS para que te asesoren.</p>
                     </div>
                 </div>
+
+                <!-- Formulario -->
                 <div class="col-xl-7 pl-xl-5 mb-5">
                     <div id="gracias" style="display: none;">
                         <p class="font-lato font-weight-bold" style="font-size: 1.7rem;color: #05516E;line-height: 2rem;">Gracias por contactarnos. Pronto nos comunicaremos contigo</p>
@@ -111,7 +121,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Celular/Teléfono *" id="celular" required>
+                            <input type="text" class="form-control" placeholder="Celular/Teléfono *" id="celular" inputmode="numeric" pattern="[0-9]*" required>
                             <div class="invalid-feedback">
                                 Por favor escribe el celular/teléfono
                             </div>
@@ -156,13 +166,13 @@
                                 Por favor acepta
                             </div>
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6LdZxu4UAAAAACKIV2T8M5JK5k46wDYChpjjTlch" data-callback="removeCaptchaValidation" data-expired-callback="disableBtn"></div>
+                        <div class="g-recaptcha" data-sitekey="6LdZxu4UAAAAACKIV2T8M5JK5k46wDYChpjjTlch" data-callback="removeCaptchaValidation"></div>
                         <div class="invalid-feedback">
                             Por favor indica qe no eres un robot
                         </div>
                         <br/>
                         <div class="text-right">
-                            <button type="submit" class="btn font-weight-bold text-white bg-thools rounded p-2 hover-btn px-5" id="submit">Enviar</button>
+                            <p id="enviando" class="mr-4 d-none">Enviando...</p> <button type="submit" class="btn font-weight-bold text-white bg-thools rounded p-2 hover-btn px-5" id="submit">Enviar</button>
                         </div>
                         </form>
                 </div>
@@ -170,19 +180,19 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer id="sticky-footer" class="py-4 bg-thools text-white font-weight-bold">
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col">
                     <p class="mb-0">E-mail: ventas@thools.com<span class="mx-2">|</span>Carrera 71B # 99A – 42 Bogotá, Colombia<span class="mx-2">|</span>Tel. (57-1) 358 3211</p>
-                    <div class="btn-group" role="group" style="font-size: 1.5rem; ">
-                        <a class="text-white mr-2" href="#"><i class="fab fa-linkedin"></i></a>
-                        <a class="text-white mr-2" href="#"><i class="fab fa-twitter-square"></i></a>
-                        <a class="text-white mr-2" href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a class="text-white mr-2" href="#"><i class="fab fa-instagram-square"></i></a>
+                    <div class="btn-group" role="group" style="font-size: 1.75rem; ">
+                        <a class="text-white mr-2" href="https://twitter.com/THOOLSOFICIAL" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a class="text-white mr-2" href="#" onclick="return false;"><i class="fab fa-linkedin"></i></a>
+                        <a class="text-white mr-2" href="#" onclick="return false;"><i class="fab fa-facebook-square"></i></a>
+                        <a class="text-white mr-2" href="#" onclick="return false;"><i class="fab fa-instagram-square"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>

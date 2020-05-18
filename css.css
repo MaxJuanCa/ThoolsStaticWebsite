@@ -17,6 +17,8 @@ body {
     flex-shrink: none;
 }
 
+/* Fonts */
+
 .font-lato {
     font-family: 'Lato', sans-serif !important;
 }
@@ -25,6 +27,12 @@ body {
     color: #05516E;
 }
 
+.font-weight-bold900 {
+    font-weight: 900;
+}
+
+/* Backgrounds */
+
 .bg-thools {
     background-color: #05516E;
 }
@@ -32,6 +40,13 @@ body {
 .bg-custom-gray {
     background-color: #F5F7F8;
 }
+
+.bg-thools-gray {
+    background-color: #D2D9DF;
+}
+
+
+/* Borders */
 
 .border-thools {
     border-color: #05516E !important;
@@ -76,6 +91,14 @@ body {
 @media (min-width: 1200px) {
     .mt-xl-6 {
         margin-top: 4rem !important;
+    }
+
+    .mt-xl-4rem {
+        margin-top: 4rem !important;
+    }
+
+    .mt-xl-5rem {
+        margin-top: 5rem !important;
     }
 
     .font-pc-4rem {
