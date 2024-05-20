@@ -1,10 +1,10 @@
 {
     "env": {
-        "SENDGRID_API_KEY": "@sendgrid_api_key"
+        "correo": "@correo"
     },
     "build": {
         "env": {
-            "SENDGRID_API_KEY": "@sendgrid_api_key"
+            "correo": "@correo"
         }
     },
     "cleanUrls": true,
