@@ -1,7 +1,7 @@
 const sgMail = require('@sendgrid/mail')
 
 export default async function(req, res) {
-  sgMail.setApiKey(process.env.sendgrid)
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
   const content = {
     to: ['juankamilo@gmail.com', 'Juan Camilo Ramirez Ortiz <jcramirez@thools.com>', 'Jadir Gabriel Acuña Ortiz <jgacuna@thools.com>', 'Julian Mauricio Urueña Ramirez <juruena@thools.com>', 'Jhon Jairo Ortiz Beltran < jortiz@thools.com>'],
