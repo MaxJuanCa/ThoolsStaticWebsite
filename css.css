@@ -17,25 +17,46 @@ body {
     flex-shrink: none;
 }
 
-.fa-solid,
-.fa-brands,
-.fa-sharp-solid {
+footer .fa-solid,
+footer .fa-brands,
+footer .fa-sharp-solid {
     background-color: #fff;
     border-radius: 4px;
     padding: 2px 3px;
 }
 
+.whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border: 1px solid #25d366;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+
+}
+
+.whatsapp-icon {
+    margin-top: 13px;
+}
+
+.whatsapp:hover {
+    background-color: #fff;
+    color: #25d366;
+}
+
 footer #icon-whatsapp {
     color: #25D366 !important;
-
 }
 
 footer #icon-x {
     color: #000 !important;
-
 }
-
-
 
 /* Fonts */
 
@@ -167,11 +188,11 @@ footer #icon-x {
 
 
 .se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url(img/loader.gif) center no-repeat #fff;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(img/loader.gif) center no-repeat #fff;
 }

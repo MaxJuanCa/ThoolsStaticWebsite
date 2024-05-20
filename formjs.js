@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $("#fecha").datepicker({
         language: 'es',
         todayHighlight: true,
@@ -7,7 +7,12 @@ $(document).ready(function(){
         weekStart: 0,
         format: {
             toDisplay: function (date, format, language) {
-                var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+                var options = {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                };
                 var d = new Date(date);
                 var e = new Date(d.getTime() + d.getTimezoneOffset() * 60 * 1000)
                 return e.toLocaleDateString('es-CO', options);
@@ -19,10 +24,9 @@ $(document).ready(function(){
         }
     });
     autosize($('textarea'));
-    $('#slogan').addClass('animated zoomIn');
 });
 
-function removeCaptchaValidation () {
+function removeCaptchaValidation() {
     $('.g-recaptcha').removeClass('is-invalid');
     $('.g-recaptcha>div').removeClass('border rounded border-danger');
 }
@@ -32,7 +36,7 @@ window.addEventListener('load', function () {
     var validation = Array.prototype.filter.call(forms, function (form) {
         form.addEventListener('submit', function (event) {
             var response = grecaptcha.getResponse();
-            if(response.length == 0){
+            if (response.length == 0) {
                 $('.g-recaptcha>div').addClass('border rounded border-danger');
                 $('.g-recaptcha').addClass('is-invalid');
                 event.preventDefault();
@@ -53,7 +57,6 @@ window.addEventListener('load', function () {
                 datos.fecha = $('#fecha').val();
                 datos.interesado = $('#interesado option:selected').text();
                 datos.mensaje = $('#mensaje').val();
-
                 datosBI.Nombre = $('#nombre').val();
                 datosBI.Empresa = $('#empresa').val();
                 datosBI.Cargo = $('#cargo').val();
@@ -75,8 +78,8 @@ window.addEventListener('load', function () {
 }, false);
 
 const datos = {
-    nombre : "",
-    empresa : "",
+    nombre: "",
+    empresa: "",
     cargo: "",
     email: "",
     celular: "",
@@ -87,14 +90,14 @@ const datos = {
 }
 
 const datosBI = [{
-    "Nombre" : "",
-    "Empresa" : "",
-    "Cargo" : "",
-    "Email" : "",
-    "Direccion" : "",
+    "Nombre": "",
+    "Empresa": "",
+    "Cargo": "",
+    "Email": "",
+    "Direccion": "",
     "Mensaje": "",
-    "Fechayhoracreacion" : "",
-    "FechaTentativa" : "",
+    "Fechayhoracreacion": "",
+    "FechaTentativa": "",
     "Celular": "",
     "Interesado": ""
 }]
@@ -133,7 +136,7 @@ function handleResponse(status, msg) {
         $('#contacto').hide();
         $('#gracias').show();
     } else {
-        console.log('Fallo al intentar enviar datos a recipientes de e-mail (Código '+ status +')');
+        console.log('Fallo al intentar enviar datos a recipientes de e-mail (Código ' + status + ')');
         console.log(msg);
     }
 };
@@ -142,7 +145,7 @@ function handleResponseBI(status, msg) {
     if (status === 200) {
         console.log('Datos enviados a PowerBI exitosamente (Código 200)');
     } else {
-        console.log('Fallo al enviar los datos a PowerBI (Código '+ status +')');
+        console.log('Fallo al enviar los datos a PowerBI (Código ' + status + ')');
         console.log(msg);
     }
 };
