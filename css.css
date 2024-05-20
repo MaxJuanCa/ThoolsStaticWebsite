@@ -17,6 +17,26 @@ body {
     flex-shrink: none;
 }
 
+.fa-solid,
+.fa-brands,
+.fa-sharp-solid {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 2px 3px;
+}
+
+footer #icon-whatsapp {
+    color: #25D366 !important;
+
+}
+
+footer #icon-x {
+    color: #000 !important;
+
+}
+
+
+
 /* Fonts */
 
 .font-lato {
