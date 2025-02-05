@@ -128,6 +128,15 @@ footer #icon-x {
     box-shadow: none;
 }
 
+/* Clientes Home  */
+
+.customer-logo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 180px;
+}
+
 /* PC */
 @media (min-width: 1200px) {
     .mt-xl-6 {
